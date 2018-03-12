@@ -42,8 +42,8 @@ int __export FAR PASCAL EVCheck( struct murr *purr )
     purr->check2 = 7;
 
     /*
-	MessageBox( NULL, "OK", "EVCheck", MB_OK | MB_TASKMODAL );
-	*/
+    MessageBox( NULL, "OK", "EVCheck", MB_OK | MB_TASKMODAL );
+    */
     return( 0 );
 }
 
