@@ -1,0 +1,23 @@
+compile286 = wcc
+dllflags = -bd -zc
+cflags = -bt=windows -d9
+
+.EXTENSIONS:
+.EXTENSIONS: .dll .exe .obj .c
+
+.BEFORE
+    set include=$(%watcom)\h\win;$(%include)
+
+all : evchk.dll .SYMBOLIC
+
+evchk.dll : evchk.obj
+    wlink @evchk
+
+evchk.obj : evchk.c
+    $(compile286) evchk -mc -zu $(dllflags) $(cflags)
+
+clean : .SYMBOLIC
+    @if exist *.exe del *.exe
+    @if exist *.dll del *.dll
+    @if exist *.obj del *.obj
+    @if exist *.map del *.map
