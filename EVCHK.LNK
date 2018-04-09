@@ -1,8 +1,10 @@
-debug all
+#debug all
 system windows dll initinstance memory
 file evchk
 option oneautodata
 option map
 option heapsize=32K
 libfile libentry
-export WEP RESIDENT
+export EVCHECK.1 RESIDENT
+export WEP.2 RESIDENT
+export LIBMAIN.3 RESIDENT

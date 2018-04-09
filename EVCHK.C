@@ -36,7 +36,7 @@ BOOL FAR PASCAL LibMain( HINSTANCE hInstance, WORD wDataSegment,
     return( 1 );
 }
 
-int __export FAR PASCAL EVCheck( struct murr *purr )
+int FAR PASCAL EVCheck( struct murr *purr )
 {
     purr->check1 = 0;
     purr->check2 = 7;
